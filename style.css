@@ -20,22 +20,17 @@ body {
 
 
 /* 이미지 */
+.img-fadeIn{
+    animation : fadeIn 1s forwards;
+}
+
 @keyframes fadeIn{
     from{
         opacity: 0;
     } to {
         opacity: 1;
     }
-
 }
-
-.imgChange{
-    animation : fadeIn 1s forwards;
-}
-
-/* .img-effect{
-} */
-
 
 
 /* 버튼 */
@@ -62,6 +57,7 @@ body {
 button:hover{
     border: 3px solid #dcdde1;
 }
+
 
     button:active{
         background-color: #a5f7c3;

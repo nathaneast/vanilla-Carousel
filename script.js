@@ -14,17 +14,19 @@ var img = new Image(400, 450);
 function changeImg(btn) {
     if (btn === btn1) {
         //left 버튼일때
-        console.log("left", number);
-
         if (number > 1 && number <= 5) {
             //넘버가 1보다 크고 , 5보다 같거나 클때 
             number--;
+            newImage();
+        } else{
+            //1번일때
+            img.classList.remove("img-fadeIn");
+            // 애니메이션 class 제거
         }
-        img.src = `image/${number}.jpg`;
+        //새로운 이미지 만들기 
+
     } else {
         //right 버튼일떄
-        console.log("right", number);
-
         if (number >= 1 && number < 5) {
             //넘버가 1보다 같거나 크고 , 5보다 적을때
             number++;
@@ -33,21 +35,19 @@ function changeImg(btn) {
             number = 1;
         }
 
-        img.src = `image/${number}.jpg`;
+        newImage();
 
     }
 
 }
 
-
 function newImage() {
     img.src = `image/${number}.jpg`;
     //이미지를 1로
     img__div.appendChild(img);
-    //이미지 div 자식 img
-    img.classList.add("imgChange");
-    // img.classList.add("img-effect");
-    //클래스 추가
+    //img__div 자식 img로 추가
+    img.classList.add("img-fadeIn");
+    //애니메이션 적용할 클래스 추가
 
 }
 
