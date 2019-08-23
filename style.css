@@ -2,6 +2,8 @@ body {
     background-color: rgb(255, 250, 222);
 }
 
+
+/* 컨테이너 */
 .container {
     display: flex;
     flex-direction: column;
@@ -16,11 +18,32 @@ body {
     text-shadow: 2px 2px 0px #bdbdbd;
 }
 
-.btn {
+
+/* 이미지 */
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+
+}
+
+.imgChange{
+    animation : fadeIn 1s forwards;
+}
+
+/* .img-effect{
+} */
+
+
+
+/* 버튼 */
+.btn__div {
     margin: 15px;
 }
 
-.btn button {
+.btn__div button {
     all: unset;
     cursor: pointer;
     background-color: #f5f6fa;
@@ -35,3 +58,16 @@ body {
     height: 40px;
     box-shadow: 0 4px 6px rgba(50, 50, 83, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
+
+button:hover{
+    border: 3px solid #dcdde1;
+}
+
+    button:active{
+        background-color: #a5f7c3;
+        border: 3px solid #4cd137;
+        color : #2c8874;
+
+    }
+
+
